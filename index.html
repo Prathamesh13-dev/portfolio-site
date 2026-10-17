@@ -56,7 +56,6 @@
     .topbar{border-color:var(--line)}.brand span,.hero h1 em{color:var(--green)}.nav,.section-note,.intro{color:#b6c3d9}.eyebrow,.label,.score-year,.project .num,.project-mark,.milestone .index{color:#9baac3}
     .brand{font-size:clamp(13px,2vw,18px);letter-spacing:-.035em;white-space:nowrap}.brand span{display:none}
     .github-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.github-card{position:relative;min-height:190px;padding:22px;border:1px solid #30405f;border-radius:8px;background:linear-gradient(145deg,#121d33,#101629);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}.github-card:before{content:'';position:absolute;inset:-60% auto auto -35%;width:150px;height:150px;border-radius:50%;background:#68f0d233;filter:blur(26px);animation:repoGlow 5s ease-in-out infinite alternate}.github-card:hover{transform:translateY(-6px);border-color:var(--green);box-shadow:0 12px 35px #0005}.github-card>*{position:relative}.github-card h3{margin:14px 0 8px;font:600 21px var(--display);letter-spacing:-.04em}.github-card p{margin:0;color:#b6c3d9;font-size:12px;line-height:1.6}.github-card .repo-meta{display:flex;justify-content:space-between;gap:8px;margin-top:18px;color:#9baac3;font:10px var(--mono);text-transform:uppercase}.repo-state{color:var(--green)!important;font:10px var(--mono);letter-spacing:.08em}.repo-state:before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:7px;box-shadow:0 0 12px var(--green);animation:repoPulse 1.6s ease-in-out infinite}.github-empty{grid-column:1/-1;border:1px dashed #30405f;border-radius:8px;padding:26px;color:#b6c3d9;font-size:13px}.github-empty code{color:var(--green)}@keyframes repoGlow{to{transform:translate(60px,45px);opacity:.45}}@keyframes repoPulse{50%{opacity:.35;transform:scale(.75)}}
-    .climber-track{position:fixed;z-index:8;top:12vh;right:clamp(8px,1.5vw,22px);bottom:8vh;width:76px;pointer-events:none;filter:drop-shadow(0 5px 10px #0005)}.climber-rope{position:absolute;left:22%;top:4px;bottom:4px;width:5px;transform:translateX(-50%);border-radius:8px;background:repeating-linear-gradient(165deg,#d6ad73 0 7px,#a87946 7px 10px,#e1bd86 10px 14px);box-shadow:0 0 0 2px #49372066,0 0 12px #e5c58d35}.climber-rope:before,.climber-rope:after{content:'';position:absolute;inset:0;border-left:1px solid #fff5;border-right:1px solid #40291966;border-radius:8px}.climber{position:absolute;left:38%;top:0;width:86px;height:142px;transform:translateX(-50%);will-change:top}.climber img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 7px 10px #0008);transform-origin:45% 15%;animation:monkey-swing 3.2s ease-in-out infinite}@keyframes monkey-swing{0%,100%{rotate:-1.5deg}50%{rotate:1.5deg}}.climber-track:after{content:'SCROLL';position:absolute;bottom:-19px;left:22%;transform:translateX(-50%);font:8px var(--mono);letter-spacing:.08em;color:#9baac3;white-space:nowrap}@media(max-width:700px){.climber-track{right:0;width:60px}.climber{width:66px;height:110px}.climber-track:after{font-size:7px}}@media(max-width:390px){.climber-track{display:none}}@media(prefers-reduced-motion:reduce){.climber img{animation:none}}
     .btn{border-color:#7686a3}.btn.primary{background:#eaf2ff;color:#101a2b}.btn:not(.primary){color:var(--ink)}
     .portrait{background:radial-gradient(circle at 50% 42%,#111a2e 0 14%,transparent 14.5%),linear-gradient(145deg,#112943,#102c3a 60%,#17384b);border-color:#4c718b}.avatar{color:#a4ffe9}.portrait-hint{color:#c0f7ec}.portrait:before,.portrait:after{border-color:#a6e8dd45}.orbit{background:#71f4d2;color:#09121e;border-color:#a4ffeb}.sticker{background:#b994ff;color:#111629;border-color:#ddd0ff}
     .section{border-color:var(--line)}.score,.social,.milestone{background:#111a2e;color:var(--ink);border-color:var(--line)}.score:nth-child(2){background:#132b43}.score:nth-child(4){background:#18332f}.score:after{border-color:#85c8e938}.score:nth-child(2):after,.score:nth-child(4):after{border-color:#71f4d255}
@@ -131,25 +130,8 @@
       <section class="section" id="contact"><div class="cta"><div><div class="label">Have a good idea?</div><h2>Let’s make something that matters.</h2></div><a class="btn" href="mailto:prathameshbhujade8@gmail.com">Get in touch <span class="arrow">↗</span></a></div></section>
     </main>
     <footer class="footer"><span>© 2026 PRATHAMESH</span><span>MADE WITH CURIOSITY ✳</span></footer>
-    <div class="climber-track" id="climber-track" aria-hidden="true"><div class="climber-rope"></div><div class="climber" id="climber"><img src="monkey-cutout.png" alt=""></div></div>
   </div>
   <script>
-    const climberTrack = document.getElementById('climber-track');
-    const climber = document.getElementById('climber');
-    let climberFrame = 0;
-    const moveClimber = () => {
-      if (climberFrame) return;
-      climberFrame = requestAnimationFrame(() => {
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
-        const travel = Math.max(0, climberTrack.clientHeight - climber.offsetHeight);
-        climber.style.top = `${progress * travel}px`;
-        climberFrame = 0;
-      });
-    };
-    window.addEventListener('scroll', moveClimber, { passive: true });
-    window.addEventListener('resize', moveClimber);
-    moveClimber();
     const githubContainer = document.getElementById('github-projects');
     const githubRepos = [
       { name: 'DSA', language: 'C++', path: 'DSA', description: 'C++ practice in data structures and algorithms.' },
