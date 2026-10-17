@@ -70,6 +70,10 @@
     @media(max-width:850px){.shell{padding:0 24px}.hero{gap:30px}.scores{grid-template-columns:repeat(2,1fr)}.socials{grid-template-columns:repeat(2,1fr)}.nav{gap:15px}.status{display:none}.github-projects{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:600px){.shell{padding:0 18px}.topbar{height:65px}.nav{display:none}.hero{grid-template-columns:1fr;padding:48px 0;gap:35px}.hero h1{font-size:64px}.intro{font-size:16px}.portrait-wrap{max-width:300px;margin:0 auto}.section{padding:48px 0}.section-head{display:block}.section-note{margin-top:14px}.scores{gap:8px}.score{min-height:145px;padding:16px}.score-value{font-size:36px}.projects,.achievement-list,.github-projects{grid-template-columns:1fr}.project{min-height:230px}.timeline{grid-template-columns:1fr}.milestone{border-right:0;border-bottom:1px solid var(--line);min-height:120px}.milestone:last-child{border-bottom:0}.cta{padding:30px;display:block}.cta .btn{margin-top:25px}.footer{gap:16px;flex-wrap:wrap}}
   </style>
+  <style>
+    .project-link{display:inline-flex;margin-top:14px;color:var(--green);font:10px var(--mono);letter-spacing:.06em;border-bottom:1px solid #71f4d266;padding-bottom:3px}
+    .project-link:hover{color:#fff}
+  </style>
 </head>
 <body>
   <div class="shell">
@@ -83,51 +87,48 @@
         <div>
           <div class="eyebrow">Portfolio / 2026</div>
           <h1>Curious mind.<br><em>Building forward.</em></h1>
-          <p class="intro">Hey, I’m <strong>Prathamesh</strong> — a student, maker, and lifelong learner. I like turning big ideas into things people can actually use.</p>
+          <p class="intro">Hey, I’m <strong>Prathamesh</strong> — a student exploring data science and AI. I work with Python, C++, and the data stack, and I’m learning by building notebooks, small apps, and APIs.</p>
           <div class="actions"><a class="btn primary" href="#work">Explore my work <span class="arrow">↘</span></a><a class="btn" href="#contact">Say hello <span class="arrow">↗</span></a></div>
         </div>
         <div class="portrait-wrap">
-          <div class="portrait" role="img" aria-label="Photo placeholder"><div class="avatar">P</div><div class="portrait-hint">YOUR PHOTO GOES HERE</div></div>
+          <div class="portrait" role="img" aria-label="Illustrated portfolio monogram"><div class="avatar">P</div><div class="portrait-hint">DATA · AI · SOFTWARE</div></div>
           <div class="orbit" aria-hidden="true">✳</div><div class="sticker">LEARNING<br>BY MAKING</div>
         </div>
       </section>
       <section class="section" id="work">
-        <div class="section-head"><div><div class="label">01 / Made with intent</div><h2>Projects in progress</h2></div><p class="section-note">A few things I’ve built, explored, or hope to bring to life.</p></div>
+        <div class="section-head"><div><div class="label">01 / Selected work</div><h2>Learning by building</h2></div><p class="section-note">Small projects and experiments from my ongoing journey with Python, data, and AI.</p></div>
         <div class="projects">
-          <article class="project"><span class="num">PROJECT / 01</span><div class="project-mark">✳</div><div><h3>Project name goes here</h3><p>A sentence about the problem you set out to solve and what you made.</p><div class="chips"><span class="chip">TECH STACK</span><span class="chip">YEAR</span></div></div></article>
-          <article class="project"><span class="num">PROJECT / 02</span><div class="project-mark">↗</div><div><h3>Another idea, made real</h3><p>Share what makes this work interesting, useful, or uniquely yours.</p><div class="chips"><span class="chip">TECH STACK</span><span class="chip">YEAR</span></div></div></article>
+          <article class="project"><span class="num">PYTHON / SMALL BUILDS</span><div class="project-mark">✳</div><div><h3>Python starter projects</h3><p>A collection of small builds including a contact book, quiz app, number guessing game, to-do list, and calculator.</p><div class="chips"><span class="chip">PYTHON</span><span class="chip">JUPYTER</span></div><a class="project-link" href="https://github.com/Prathamesh13-dev/PythonBuilds" target="_blank" rel="noreferrer">VIEW REPOSITORY ↗</a></div></article>
+          <article class="project"><span class="num">AI / EXPERIMENTS</span><div class="project-mark">↗</div><div><h3>AI task collection</h3><p>Experiments organized around object detection, an AI music studio, an FAQ chatbot, and a translator.</p><div class="chips"><span class="chip">AI</span><span class="chip">PYTHON · HTML</span></div><a class="project-link" href="https://github.com/Prathamesh13-dev/codealpha_tasks" target="_blank" rel="noreferrer">VIEW REPOSITORY ↗</a></div></article>
         </div>
       </section>
       <section class="section" id="github-work">
-        <div class="section-head"><div><div class="label">On GitHub</div><h2>Code, in motion</h2></div><p class="section-note">A selection of public projects from my GitHub profile. Open any card to explore the code.</p></div>
+        <div class="section-head"><div><div class="label">On GitHub</div><h2>Notes and experiments</h2></div><p class="section-note">Browse my public repositories for data notebooks, machine learning notes, and C++ practice.</p></div>
         <div class="github-projects" id="github-projects" aria-live="polite"></div>
       </section>
       <section class="section">
         <div class="section-head"><div><div class="label">02 / What I bring</div><h2>Skills I’m growing</h2></div><p class="section-note">A toolkit that keeps evolving with every project and new challenge.</p></div>
-        <div class="skills"><span class="skill">Python</span><span class="skill">C++</span><span class="skill">NumPy</span><span class="skill">pandas</span><span class="skill">Matplotlib</span><span class="skill">Seaborn</span><span class="skill">FastAPI</span></div>
+        <div class="skills"><span class="skill">Python</span><span class="skill">C++ &amp; DSA</span><span class="skill">NumPy</span><span class="skill">pandas</span><span class="skill">Matplotlib</span><span class="skill">Seaborn</span><span class="skill">scikit-learn</span><span class="skill">Flask</span></div>
       </section>
       <section class="section">
-        <div class="section-head"><div><div class="label">03 / Small wins, big energy</div><h2>Achievements</h2></div><p class="section-note">The moments, milestones, and recognitions I’m proud of.</p></div>
+        <div class="section-head"><div><div class="label">03 / GitHub milestone</div><h2>Open source progress</h2></div><p class="section-note">A small recognition from my work on GitHub.</p></div>
         <div class="achievement-list">
-          <article class="achievement"><div class="medal">✦</div><div><h3>Add an achievement</h3><p>Competition, award, certification, or milestone · YEAR</p></div></article>
-          <article class="achievement"><div class="medal">↗</div><div><h3>Add another highlight</h3><p>What you accomplished and when · YEAR</p></div></article>
-          <article class="achievement"><div class="medal">◎</div><div><h3>A moment worth remembering</h3><p>Recognition, volunteering, or personal win · YEAR</p></div></article>
-          <article class="achievement"><div class="medal">⌁</div><div><h3>Keep adding good things</h3><p>Every step forward counts · YEAR</p></div></article>
+          <article class="achievement"><div class="medal">✦</div><div><h3>GitHub Pull Shark</h3><p>A GitHub profile achievement for pull request contributions.</p></div></article>
         </div>
       </section>
       <section class="section" id="journey">
-        <div class="section-head"><div><div class="label">04 / Looking ahead</div><h2>Next on my horizon</h2></div><p class="section-note">Goals give curiosity a direction. Here’s what I’m reaching for.</p></div>
+        <div class="section-head"><div><div class="label">04 / Current learning path</div><h2>What I’m exploring</h2></div><p class="section-note">The areas I’m spending time on as I grow my toolkit.</p></div>
         <div class="timeline">
-          <article class="milestone"><span class="index">NOW / 01</span><h3>Learn deeply</h3><p>Add the skill, subject, or idea you’re focused on right now.</p></article>
-          <article class="milestone"><span class="index">NEXT / 02</span><h3>Build boldly</h3><p>Describe the kind of project or opportunity you want to take on.</p></article>
-          <article class="milestone"><span class="index">LATER / 03</span><h3>Make an impact</h3><p>Share a bigger goal you’re working towards over time.</p></article>
+          <article class="milestone"><span class="index">01 / FOUNDATIONS</span><h3>C++ &amp; problem solving</h3><p>Practicing data structures and algorithms while strengthening core programming skills.</p></article>
+          <article class="milestone"><span class="index">02 / DATA &amp; AI</span><h3>Explore with Python</h3><p>Working through data analysis, visualization, and machine learning tools.</p></article>
+          <article class="milestone"><span class="index">03 / BUILD</span><h3>APIs with Flask</h3><p>Learning to turn ideas into useful backend services and applications.</p></article>
         </div>
       </section>
       <section class="section">
         <div class="section-head"><div><div class="label">05 / Around the web</div><h2>Find me online</h2></div><p class="section-note">Follow what I’m making, learning, and sharing.</p></div>
         <div class="socials"><a class="social" href="https://github.com/Prathamesh13-dev" target="_blank" rel="noreferrer" aria-label="GitHub profile">GitHub <b>↗ OPEN PROFILE</b></a><a class="social" href="https://www.linkedin.com/in/prathamesh-bhujade-005863338/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">LinkedIn <b>↗ OPEN PROFILE</b></a><a class="social" href="https://www.instagram.com/sujal_privv13/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram profile">Instagram <b>↗ OPEN PROFILE</b></a><a class="social" href="https://leetcode.com/u/pratha_mesh/" target="_blank" rel="noreferrer" aria-label="LeetCode profile">LeetCode <b>↗ OPEN PROFILE</b></a></div>
       </section>
-      <section class="section" id="contact"><div class="cta"><div><div class="label">Have a good idea?</div><h2>Let’s make something that matters.</h2></div><a class="btn" href="mailto:hello@example.com">Get in touch <span class="arrow">↗</span></a></div></section>
+      <section class="section" id="contact"><div class="cta"><div><div class="label">Have a good idea?</div><h2>Let’s make something that matters.</h2></div><a class="btn" href="mailto:prathameshbhujade8@gmail.com">Get in touch <span class="arrow">↗</span></a></div></section>
     </main>
     <footer class="footer"><span>© 2026 PRATHAMESH</span><span>MADE WITH CURIOSITY ✳</span></footer>
     <div class="climber-track" id="climber-track" aria-hidden="true"><div class="climber-rope"></div><div class="climber" id="climber"><img src="monkey-cutout.png" alt=""></div></div>
@@ -151,19 +152,19 @@
     moveClimber();
     const githubContainer = document.getElementById('github-projects');
     const githubRepos = [
-      { name: 'DSA', language: 'C++', path: 'DSA' },
-      { name: 'Machine_learning', language: 'Machine learning', path: 'Machine_learning' },
-      { name: 'PythonBuilds', language: 'Python', path: 'PythonBuilds' },
-      { name: 'Data_visualization-seaborn-matplotlib-', language: 'Jupyter Notebook', path: 'Data_visualization-seaborn-matplotlib-' },
-      { name: 'Pandas', language: 'Jupyter Notebook', path: 'Pandas' },
-      { name: 'Numpy', language: 'Jupyter Notebook', path: 'Numpy' }
+      { name: 'DSA', language: 'C++', path: 'DSA', description: 'C++ practice in data structures and algorithms.' },
+      { name: 'Machine_learning', language: 'Python', path: 'Machine_learning', description: 'Notes from my ongoing machine learning learning journey.' },
+      { name: 'PythonBuilds', language: 'Python', path: 'PythonBuilds', description: 'Small Python programs, games, and notebook projects.' },
+      { name: 'Data visualization', language: 'Matplotlib', path: 'Data_visualization-seaborn-matplotlib-', description: 'Jupyter notebook notes for data visualization with Matplotlib.' },
+      { name: 'Pandas', language: 'Jupyter Notebook', path: 'Pandas', description: 'Notebook practice with the pandas data analysis library.' },
+      { name: 'NumPy', language: 'Jupyter Notebook', path: 'Numpy', description: 'Notebook practice with NumPy for numerical computing.' }
     ];
     githubRepos.forEach((repo, index) => {
       const card = document.createElement('a');
       card.className = 'github-card'; card.href = `https://github.com/Prathamesh13-dev/${repo.path}`; card.target = '_blank'; card.rel = 'noreferrer';
       const state = document.createElement('span'); state.className = 'repo-state'; state.textContent = `BUILD / 0${index + 1}`;
       const title = document.createElement('h3'); title.textContent = repo.name;
-      const desc = document.createElement('p'); desc.textContent = 'Explore this public project and its code on GitHub.';
+      const desc = document.createElement('p'); desc.textContent = repo.description;
       const meta = document.createElement('div'); meta.className = 'repo-meta';
       const language = document.createElement('span'); language.textContent = repo.language;
       const open = document.createElement('span'); open.textContent = 'OPEN ↗';
